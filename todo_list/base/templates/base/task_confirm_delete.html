@@ -1,0 +1,18 @@
+
+{% extends 'base/main.html'%}
+{% block content %}
+
+<div class="header-bar">
+<a href="{% url 'task-create' %}">Go Back</a>
+</div>
+
+<form method="post" action="">
+{% csrf_token %}
+<p>Are you sure you want to delete "{{task}}"</p>
+<input style="margin-top:10px ;" class="button" type="submit" value="Delete">
+
+</form>    
+
+
+
+{% endblock  %}
